@@ -1,0 +1,159 @@
+.suspension {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 9999;
+}
+
+.suspension-inner {
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    width: 95%;
+    max-width: 800px;
+    max-height: 90%;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+    padding: 20px 20px 90px;
+    border: 20px solid #FFF;
+    background: url(../images/suspension/accent_top_left.png) top left no-repeat, url(../images/suspension/accent_bottom_right.png) bottom right no-repeat, url(../images/suspension/notice_bg.png) center no-repeat;
+    background-color:#F5F5F5;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+}
+
+.suspension-inner h2.heading {
+    font-family: sans-serif;
+    font-size: 60px;
+    font-weight: 700;
+    color: #EA1A34;
+}
+
+.suspension-inner h3 {
+    font-family: sans-serif;
+    font-size: 30px;
+    color: #EA1A34;
+}
+
+.suspension-inner .domain-name {
+    background: #E6E6E6;
+    padding: 15px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.suspension-inner .domain-name strong {
+    color: #043D76;
+    font-size: 26px;
+}
+
+.suspension-inner p {
+    font-size: 16px;
+    max-width: 630px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #444444;
+}
+
+.suspension-inner .contact-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 700px;
+    margin: 20px auto 40px;
+}
+
+.suspension-inner .contact-info .phone {
+    position: relative;
+    width: 40%;
+    padding-left: 50px;
+    text-align: left;
+}
+
+.suspension-inner .contact-info .email {
+    position: relative;
+    width: 60%;
+    padding-left: 50px;
+    text-align: left;
+}
+
+.suspension-inner .contact-info .phone .icon,
+.suspension-inner .contact-info .email .icon {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+}
+
+.suspension-inner .contact-info .phone .icon::before {
+    content: url(../images/suspension/phone.png);
+}
+
+.suspension-inner .contact-info .email .icon::before {
+    content: url(../images/suspension/email.png);
+}
+
+.suspension-inner .contact-info .phone a {
+    display: block;
+    color: #444;
+    font-weight: 700;
+    font-size: 22px;
+}
+
+.suspension-inner .contact-info .email a {
+    display: block;
+    color: #444;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+@media screen and (max-width: 1024px) {
+    .suspension-inner {
+        overflow-x: hidden;
+        overflow-y: scroll;
+    }
+
+    .suspension-inner h2.heading {
+        font-size: 30px;
+    }
+
+    .suspension-inner h3 {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 781px) {
+
+    .suspension-inner .contact-info {
+        flex-wrap: wrap;
+    }
+
+    .suspension-inner .contact-info .phone,
+    .suspension-inner .contact-info .email {
+        width: 100%;
+        text-align: center;
+        padding-left: 0;
+        margin: 10px 0;
+    }
+
+    .suspension-inner .contact-info .phone .icon,
+    .suspension-inner .contact-info .email .icon {
+        position: relative;
+        transform: none;
+        -webkit-transform: none;
+        -moz-transform: none;
+        -ms-transform: none;
+        -o-transform: none;
+}
+}
